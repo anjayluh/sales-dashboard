@@ -15,10 +15,201 @@
 
 <body>
     <div class="wrapper">
-        <nav></nav>
+        <nav>
+            <figure class="nav-item logo">
+                <img src="./assets/images/logo.png" alt="logo" />
+            </figure>
+            <figure class="nav-item">
+                <img src="./assets/images/frequency.svg" alt="frequency" />
+            </figure>
+            <figure class="nav-item">
+                <img src="./assets/images/wallet.svg" alt="wallet" />
+            </figure>
+            <figure class="nav-item">
+                <img src="./assets/images/credit-card.svg" alt="credit-card" />
+            </figure>
+            <figure class="nav-item">
+                <img src="./assets/images/list.svg" alt="list" />
+            </figure>
+            <figure class="nav-item">
+                <img src="./assets/images/gear.svg" alt="settings" />
+            </figure>
+        </nav>
         <main>
-            <section></section>
-            <section></section>
+            <section>
+                <header>
+                    <input id="search" type="text" placeholder="Search">
+                    <h1>Sales Summary</h1>
+                </header>
+                <div class="current-balance">
+                    <div class="summary">
+                        <div class="col">
+                            <p class="title">Current balance</p>
+                            <p class="amount">Current balance</p>
+                            <p class="total">Total summary in
+                                <span class="period">
+                                 Month
+                            </span>
+                                <figure class="">
+                                    <img src="./assets/images/down-arrow.svg" alt="down-arrow" />
+                                </figure>
+                            </p>
+                        </div>
+                        <div class="col">
+                            <p class="download">
+                                Export report
+                                <figure class="">
+                                    <img src="./assets/images/download.svg" alt="download" />
+                                </figure>
+                            </p>
+                            <ol>
+                                <li class="item sales">Sales</li>
+                                <li class="item orders">Orders</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="graph">
+                        <figure class="">
+                            <img src="./assets/images/graph.png" alt="graph" />
+                        </figure>
+                    </div>
+                </div>
+                <div class="recent-orders">
+                    <h2> Recent Orders</h2>
+                    <table border=3>
+                        <thead>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th></th>
+                        </thead>
+                        <tr>
+                            <td>3290</td>
+                            <td>Sharon Bowers</td>
+                            <td>May 23,2020</td>
+                            <td>$89</td>
+                            <td>
+                                <figure class="">
+                                    <img src="./assets/images/more.svg" alt="more" />
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3289</td>
+                            <td>Constance Willis</td>
+                            <td>May 22,2020</td>
+                            <td>$74</td>
+                            <td>
+                                <figure class="">
+                                    <img src="./assets/images/more.svg" alt="more" />
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3288</td>
+                            <td>Josephine Ellis</td>
+                            <td>May 20,2020</td>
+                            <td>$79</td>
+                            <td>
+                                <figure class="">
+                                    <img src="./assets/images/more.svg" alt="more" />
+                                </figure>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <section>
+                <header>
+                    <figure class="">
+                        <img src="./assets/images/avi.jpg" alt="avi" />
+                    </figure>
+                    <figure class="">
+                        <img src="./assets/images/more.svg" alt="more" />
+                    </figure>
+                </header>
+                <div class="statistics">
+                    <h2>Statistics</h2>
+                    <div class="items">
+                        <div class="item">
+                            <figure class="">
+                                <img src="./assets/images/graph-blue.PNG" alt="graph-blue" />
+                            </figure>
+                            <p class="text">15.980</p>
+                            <p class="name">Orders</p>
+                        </div>
+                        <div class="item">
+                            <figure class="">
+                                <img src="./assets/images/graph-amber.PNG" alt="graph-amber" />
+                            </figure>
+                            <p class="text">15.980</p>
+                            <p class="name">Orders</p>
+                        </div>
+                    </div>
+                    <div class="payment-history">
+                        <h2>
+                            Payment History
+                            <figure class="">
+                                <img src="./assets/images/history.PNG" alt="history" />
+                            </figure>
+                        </h2>
+                        <div class="summary">
+                            <div class="card">
+                                <figure class="">
+                                    <img src="./assets/images/75.PNG" alt="75" />
+                                </figure>
+                                <div class="description">
+                                    <p class="title">Average income</p>
+                                    <p class="amount">$12,380.00</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <figure class="">
+                                    <img src="./assets/images/25.PNG" alt="25" />
+                                </figure>
+                                <div class="description">
+                                    <p class="title">Average spend</p>
+                                    <p class="amount">$2,620.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="transactions">
+                            <div class="item">
+                                <i class="material-icons">check</i>
+                                <div class="content">
+                                    <p class="text">Order #34786</p>
+                                    <p class="date">May 18, 2020</p>
+                                </div>
+                                <figure class="">
+                                    <img src="./assets/images/more.svg" alt="more" />
+                                </figure>
+                            </div>
+                            <div class="item">
+                                <i class="material-icons">check</i>
+                                <div class="content">
+                                    <p class="text">Order #32908</p>
+                                    <p class="date">May 14, 2020</p>
+                                </div>
+                                <figure class="">
+                                    <img src="./assets/images/more.svg" alt="more" />
+                                </figure>
+                            </div>
+                            <div class="item">
+                                <i class="material-icons">check</i>
+                                <div class="content">
+                                    <p class="text">Order #45639</p>
+                                    <p class="date">May 12, 2026</p>
+                                </div>
+                                <figure class="">
+                                    <img src="./assets/images/more.svg" alt="more" />
+                                </figure>
+                            </div>
+                        </div>
+                        <button class="view">View All</button>
+                    </div>
+                </div>
+            </section>
         </main>
     </div>
 </body>
