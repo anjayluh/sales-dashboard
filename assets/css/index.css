@@ -22,7 +22,7 @@
 }
 
 body {
-    background-color: #f2f3f5;
+    background-color: #FFFFFF;
     padding: 0;
     font-style: normal;
     font-size: 20px;
@@ -30,11 +30,79 @@ body {
     line-height: 1.42857143;
     font-family: "Roboto";
     color: #080808;
-    /* color: #797979; */
+    margin: 0px;
+}
+
+.wrapper,
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+nav,
+main section {
+    display: flex;
+    flex-direction: column
 }
 
 nav {
+    padding-top: 18px;
     width: 120px;
-    display: flex;
-    flex-direction: column
+}
+
+.nav-item.logo img {
+    width: 30px;
+}
+
+.nav-item:not(.logo) {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-item:not(.logo) img {
+    width: 20px
+}
+
+main section {
+    padding: 40px 95px;
+}
+
+section.sales {
+    background-color: #FBFBFB;
+    width: 855px;
+}
+
+section.sales input {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    font-size: 11px;
+    font-weight: bold;
+    color: #c7ccd1;
+    height: 13px;
+    margin: 0;
+    z-index: 2000;
+    border-radius: 1px;
+    display: block;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+    line-height: 1.5;
+    background-position: 270px -10px;
+    background-image: url('http://www.kirupa.com/images/search.png');
+    background-repeat: no-repeat;
+}
+
+section.sales input:focus {
+    color: #495057;
+    outline: 0;
+    box-shadow: none;
+    border-color: #1ab394;
+}
+
+section.sales input::placeholder {
+    color: #c7ccd1;
+}
+
+section.statistics {
+    width: 475px
 }
