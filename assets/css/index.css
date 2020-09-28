@@ -1,34 +1,41 @@
 /* fonts */
 
 @font-face {
-    font-family: "Roboto";
-    src: url("../fonts/roboto/Roboto-Light.ttf");
+    font-family: "Poppins";
+    src: url("../fonts/Poppins/Poppins-Light.ttf");
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "Roboto";
-    src: url("../fonts/roboto/Roboto-Regular.ttf");
+    font-family: "Poppins";
+    src: url("../fonts/Poppins/Poppins-Regular.ttf");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "Roboto";
-    src: url("../fonts/roboto/Roboto-Medium.ttf");
+    font-family: "Poppins";
+    src: url("../fonts/Poppins/Poppins-Medium.ttf");
     font-weight: 500;
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins/Poppins-SemiBold.ttf");
+    font-weight: 600;
+    font-style: normal;
+}
+
 body {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding: 0;
     font-style: normal;
     font-size: 20px;
     font-weight: 300;
     line-height: 1.42857143;
-    font-family: "Roboto";
+    font-family: "Poppins";
     color: #080808;
     margin: 0px;
 }
@@ -42,16 +49,22 @@ main {
 nav,
 main section {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
 }
 
 nav {
     padding-top: 18px;
-    width: 120px;
+    max-width: 7%;
 }
 
-.nav-item.logo img {
-    width: 30px;
+.nav-item {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-item img {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .nav-item:not(.logo) {
@@ -60,23 +73,27 @@ nav {
 }
 
 .nav-item:not(.logo) img {
-    width: 20px
+    width: 20px;
+}
+
+main {
+    width: 100%;
 }
 
 main section {
-    padding: 40px 95px;
+    padding: 40px 90px;
 }
 
 section.sales {
-    background-color: #FBFBFB;
-    width: 855px;
+    background-color: #fbfbfb;
+    width: 80%;
 }
 
 section.sales input {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
     border: medium none;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 400;
     color: #c7ccd1;
     height: 13px;
     margin: 0;
@@ -91,26 +108,20 @@ section.sales input {
 
 .search {
     display: flex;
-    flex-direction: row
+    flex-direction: row;
 }
 
 .search>i.fa {
     margin-top: 5px;
     font-size: 16px;
-    color: #606060;
+    font-weight: 400;
+    color: #000000;
 }
-
-
-/* .search-icon {
-    top: -25px;
-    position: relative;
-} */
 
 section.sales input:focus {
     color: #495057;
     outline: 0;
     box-shadow: none;
-    border-color: #1ab394;
 }
 
 section.sales input::placeholder {
@@ -118,16 +129,18 @@ section.sales input::placeholder {
 }
 
 section.statistics {
-    width: 475px
+    width: 20%;
 }
 
 .sales h1 {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 600;
-    color: #0F0F0F;
+    color: #0f0f0f;
+    margin-top: 64px;
+    margin-bottom: 10px;
 }
 
-.sales ul {
+.sales header ul {
     display: flex;
     flex-direction: row;
     list-style-type: none;
@@ -137,7 +150,7 @@ section.statistics {
     justify-content: left;
     height: 40px;
     margin: 0px auto 25px auto;
-    border-bottom: 1px solid #DBE1E7;
+    border-bottom: 1px solid #dbe1e7;
 }
 
 li.inactive,
@@ -145,7 +158,7 @@ li.inactive a {
     color: #bec3c8;
 }
 
-.sales ul li {
+.sales header ul li {
     padding: 18px 30px;
 }
 
@@ -154,21 +167,447 @@ a {
 }
 
 li.active {
-    bottom: -3px;
+    bottom: -1px;
     position: relative;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 li.active:after {
     position: absolute;
     content: "";
-    border-bottom: 2px solid #525252;
-    width: 85%;
+    border-bottom: 2px solid #2131b9;
+    width: 100%;
     transform: translateX(-50%);
-    bottom: 1px;
-    left: 50%;
+    bottom: 0px;
+    left: 51%;
 }
 
 li.active a {
-    color: #505050;
+    color: #2131b9;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.current-balance {
+    margin-bottom: 39px;
+}
+
+.summary .left figure {
+    margin: 0px;
+    width: 11px;
+}
+
+.summary .left .total,
+.summary .left .period {
+    display: flex;
+    flex-direction: row;
+}
+
+.summary .left .period {
+    margin-left: 14px;
+    margin-right: 10px;
+}
+
+.summary p {
+    margin: 2px 0px 6px 0px;
+}
+
+.summary {
+    margin-bottom: 47px;
+}
+
+p.title {
+    font-size: 12px;
+    font-weight: 400;
+    color: #c7ccd1;
+}
+
+p.amount {
+    font-size: 29px;
+    font-weight: 500;
+    color: #000000;
+}
+
+p.total {
+    margin-top: 0px;
+    font-weight: 400;
+    color: #c7ccd1;
+    font-size: 12px;
+}
+
+.total .period {
+    color: #2b2b2b;
+    font-weight: 600;
+}
+
+.col.right .export {
+    margin-bottom: 36px;
+}
+
+.col.right {
+    width: 135px;
+}
+
+.right {
+    margin-left: auto;
+}
+
+.col.right figure {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #dbe1e8;
+    padding: 3px;
+    margin: 6px 0px 0px auto;
+    margin-top: 6px;
+    border-radius: 5px;
+}
+
+.col.right figure img {
+    width: 16px;
+    height: 16px;
+    margin-left: 7px;
+    margin-top: 6px;
+}
+
+.export>.download {
+    margin-top: 19px;
+}
+
+.right>ul {
+    padding-inline-start: 16px;
+    margin: 0px;
+    justify-content: left;
+}
+
+.export p,
+.right ul li {
+    font-size: 12px;
+    font-weight: 500;
+    color: #060606;
+}
+
+.right ul li.sales {
+    color: #fd7239;
+}
+
+.right ul li.sales>.text,
+.right>ul>li.orders>.text {
+    color: #060606;
+}
+
+.right>ul>li.orders {
+    margin-left: auto;
+}
+
+.right ul li.orders {
+    color: #2131b9;
+}
+
+.graph figure {
+    margin: 0px;
+}
+
+.graph figure img {
+    width: 644px;
+    height: 207px;
+}
+
+.recent-orders {
+    font-size: 15px;
+    font-weight: 500;
+    color: #0f0f0f;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #0f0f0f;
+    margin: 0px;
+}
+
+h2.stat {
+    margin-bottom: 18px;
+}
+
+.responsive-table {
+    margin: 0px;
+    padding: 0px;
+}
+
+.responsive-table li {
+    border-radius: 10px;
+    padding: 22px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.responsive-table .table-header {
+    color: #c3c9d0;
+    font-size: 11px;
+    background-color: #fbfbfb;
+    text-transform: Capitalize;
+}
+
+.responsive-table .table-row {
+    color: #020202;
+    font-weight: 500;
+    font-size: 12px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.responsive-table .col-1 {
+    flex-basis: 10%;
+}
+
+.responsive-table .col-2 {
+    flex-basis: 54%;
+}
+
+.responsive-table .col-3 {
+    flex-basis: 20%;
+}
+
+.responsive-table .col-4 {
+    flex-basis: 20%;
+}
+
+.responsive-table .col-5 {
+    flex-basis: 1%;
+}
+
+@media all and (max-width: 767px) {
+    .responsive-table .table-header {
+        display: none;
+    }
+    .responsive-table li {
+        display: block;
+    }
+    .responsive-table .col {
+        flex-basis: 100%;
+    }
+    .responsive-table .col {
+        display: flex;
+        padding: 10px 0;
+    }
+    .responsive-table :before {
+        color: #6c7a89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+    }
+}
+
+.responsive-table figure {
+    margin: 0px;
+}
+
+.responsive-table .col-5 figure img {
+    width: 12px;
+}
+
+.statistics .container {
+    margin-bottom: 51px;
+}
+
+.statistics header {
+    margin-left: auto;
+}
+
+.statistics figure.notification {
+    margin-top: 4px;
+    margin-left: 29px;
+}
+
+.statistics figure.notification img {
+    width: 23px;
+}
+
+.statistics figure {
+    margin: 0px;
+}
+
+.statistics figure.avi img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.statistics .items {
+    height: 83px;
+    border: 1px solid #dbe1e8;
+    border-radius: 10px;
+    padding: 20px 30px;
+}
+
+.items p {
+    margin: 0px auto;
+}
+
+.item p.text {
+    font-size: 22px;
+    font-weight: 600;
+    color: #0f0f0f;
+}
+
+.item p.name {
+    font-size: 12px;
+    color: #c8cdd4;
+    margin-left: unset;
+}
+
+.payment-history h2 figure {
+    margin-top: 2px;
+    margin-left: auto;
+}
+
+.payment-history h2 figure img {
+    width: 33px;
+}
+
+.card {
+    height: 73px;
+    color: #ffffff;
+    margin-bottom: 12px;
+    padding: 17px 38px 0px 27px;
+    border-radius: 10px;
+}
+
+.card p {
+    margin: 0px;
+}
+
+p.history-title {
+    font-size: 10px;
+    font-weight: 300;
+}
+
+p.history-amount {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card .description {
+    margin-left: 4%;
+    margin-top: 7px;
+}
+
+.card.income {
+    background-color: #fd763e;
+}
+
+.card.speed {
+    background-color: #1629bb;
+}
+
+.card.speed figure {
+    margin-left: 7px;
+}
+
+h2.trans {
+    margin-bottom: 14px;
+}
+
+.transactions>.responsive-table>.table-row {
+    color: #020202;
+    background-color: #ffffff;
+    box-shadow: unset;
+}
+
+.transactions>.responsive-table>li {
+    border-radius: unset;
+    padding: 0px;
+    margin-bottom: 15px;
+}
+
+.transactions p {
+    margin: 0px;
+}
+
+figure.status {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #dbe1e8;
+    padding: 3px;
+    margin: 0px;
+    border-radius: 5px;
+}
+
+figure.status img {
+    width: 16px;
+    height: 16px;
+    margin-left: 7px;
+    margin-top: 6px;
+}
+
+.transactions p.order {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.transactions p.date {
+    color: #c2c7cd;
+    font-weight: 400;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+button.view {
+    width: 100%;
+    height: 45px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    display: flex;
+    flex-direction: row;
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #dbe1e8;
+    border-radius: 10px;
+}
+
+button.view:focus {
+    outline: none;
+}
+
+button.view span {
+    margin: auto;
+}
+
+
+/* Responsiveness */
+
+@media screen and (max-width: 1449px) {
+    .wrapper,
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+    .wrapper main {
+        width: 89%;
+        flex-direction: column;
+    }
+    main section.sales,
+    main section.statistics {
+        width: 100%;
+    }
+    main section {
+        padding: 40px;
+    }
+    .graph figure img {
+        width: 80%;
+        height: 207px;
+    }
 }
