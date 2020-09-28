@@ -489,10 +489,14 @@ h2.stat {
     width: 33px;
 }
 
+.payment-history .summary {
+    margin-top: 24px;
+}
+
 .card {
     height: 73px;
     color: #ffffff;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     padding: 17px 38px 0px 27px;
     border-radius: 10px;
 }
