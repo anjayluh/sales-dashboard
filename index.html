@@ -7,7 +7,7 @@
         Sales Dashboard
     </title>
     <link rel="stylesheet" href="./assets/css/index.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
     </script>
@@ -38,8 +38,22 @@
         <main>
             <section class="sales">
                 <header>
-                    <input id="search" type="text" placeholder="Search" color="#DFE2E5">
+                    <div class="search">
+                        <i class="fa fa-search search-icon"></i>
+                        <input id="search" type="text" placeholder="Search" color="#DFE2E5">
+                    </div>
                     <h1>Sales Summary</h1>
+                    <ul>
+                        <li class="active">
+                            <a href="">Product</a>
+                        </li>
+                        <li class="inactive">
+                            <a href="">Services</a>
+                        </li>
+                        <li class="inactive">
+                            <a href="">Referral</a>
+                        </li>
+                    </ul>
                 </header>
                 <div class="current-balance">
                     <div class="summary">

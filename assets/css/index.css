@@ -75,7 +75,7 @@ section.sales {
 section.sales input {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
     border: medium none;
-    font-size: 11px;
+    font-size: 14px;
     font-weight: bold;
     color: #c7ccd1;
     height: 13px;
@@ -87,10 +87,24 @@ section.sales input {
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
     width: 100%;
     line-height: 1.5;
-    background-position: 270px -10px;
-    background-image: url('http://www.kirupa.com/images/search.png');
-    background-repeat: no-repeat;
 }
+
+.search {
+    display: flex;
+    flex-direction: row
+}
+
+.search>i.fa {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #606060;
+}
+
+
+/* .search-icon {
+    top: -25px;
+    position: relative;
+} */
 
 section.sales input:focus {
     color: #495057;
@@ -105,4 +119,56 @@ section.sales input::placeholder {
 
 section.statistics {
     width: 475px
+}
+
+.sales h1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0F0F0F;
+}
+
+.sales ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0;
+    justify-content: left;
+    height: 40px;
+    margin: 0px auto 25px auto;
+    border-bottom: 1px solid #DBE1E7;
+}
+
+li.inactive,
+li.inactive a {
+    color: #bec3c8;
+}
+
+.sales ul li {
+    padding: 18px 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li.active {
+    bottom: -3px;
+    position: relative;
+    font-weight: 400;
+}
+
+li.active:after {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #525252;
+    width: 85%;
+    transform: translateX(-50%);
+    bottom: 1px;
+    left: 50%;
+}
+
+li.active a {
+    color: #505050;
 }
