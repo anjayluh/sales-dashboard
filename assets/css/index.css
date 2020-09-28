@@ -426,7 +426,21 @@ h2.stat {
 
 .statistics figure.notification {
     margin-top: 4px;
-    margin-left: 29px;
+    margin-right: 25px;
+}
+
+.statistics .right figure {
+    margin-top: 6px;
+}
+
+.statistics .item:not(.right) {
+    border-right: 1px solid #dbe1e8;
+    padding-right: 12px;
+    margin-left: auto;
+}
+
+.statistics .item.right {
+    margin-left: 12px;
 }
 
 .statistics figure.notification img {
@@ -609,5 +623,15 @@ button.view span {
     .graph figure img {
         width: 80%;
         height: 207px;
+    }
+    figure.status img {
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .wrapper main {
+        width: 82%;
+        flex-direction: column;
     }
 }
