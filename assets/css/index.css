@@ -110,12 +110,13 @@ div.search {
     border: medium none;
     font-size: 14px;
     font-weight: 400;
-    color: #c7ccd1;
+    color: #abb2ba;
     height: 13px;
     margin: 0;
     z-index: 2000;
     border-radius: 1px;
     display: block;
+    margin-top: 8px;
     padding: 6px 12px;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
     width: 100%;
@@ -128,10 +129,8 @@ div.search {
 }
 
 .search>i.fa {
-    margin-top: 5px;
+    margin-top: 10px;
     font-size: 16px;
-    font-weight: 400;
-    color: #000000;
 }
 
 .top-nav input:focus {
@@ -141,8 +140,9 @@ div.search {
     border: medium none;
 }
 
-top-nav input::placeholder {
-    color: #c7ccd1;
+.top-nav input::placeholder {
+    color: #abb2ba;
+    font-weight: 400;
 }
 
 section.statistics {
@@ -463,6 +463,7 @@ h2.stat {
 }
 
 .top-nav figure.notification img {
+    margin-top: 4px;
     width: 23px;
 }
 
