@@ -58,7 +58,7 @@ main section {
 
 nav.main-nav {
     padding-top: 19px;
-    max-width: 7%;
+    width: 121px;
 }
 
 .nav-item {
@@ -641,6 +641,10 @@ button.view span {
     }
     main section {
         padding: 40px;
+    }
+    .top-nav .search,
+    .top-nav .right {
+        padding: 40px 18px 40px 40px;
     }
     .graph figure img {
         width: 80%;
