@@ -626,6 +626,10 @@ button.view span {
     margin: auto;
 }
 
+.statistics .item.right img {
+    margin-top: 4px;
+}
+
 
 /* Responsiveness */
 
@@ -657,5 +661,11 @@ button.view span {
     .wrapper main {
         width: 93%;
         flex-direction: column;
+    }
+    .statistics .item:not(.right) {
+        margin-left: unset;
+    }
+    .statistics .items {
+        justify-content: space-around;
     }
 }
