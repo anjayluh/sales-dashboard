@@ -591,12 +591,13 @@ figure.status img {
 }
 
 .transactions p.order {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 600;
 }
 
 .transactions p.date {
     color: #c2c7cd;
+    font-size: 13px;
     font-weight: 400;
 }
 
