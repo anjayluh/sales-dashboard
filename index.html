@@ -14,7 +14,7 @@
 
 <body>
     <div class="wrapper">
-        <nav>
+        <nav class="main-nav">
             <figure class="nav-item logo">
                 <img src="./assets/images/logo.png" alt="logo" />
             </figure>
@@ -34,170 +34,175 @@
                 <img src="./assets/images/gear.svg" alt="settings" />
             </figure>
         </nav>
-        <main>
-            <section class="sales">
-                <header>
+        <div class="container flex-col">
+            <nav class="top-nav">
+                <header class=" flex-row">
                     <div class="search">
                         <i class="fa fa-search search-icon"></i>
                         <input id="search" type="text" placeholder="Search" color="#DFE2E5" />
                     </div>
-                    <h1>Sales Summary</h1>
-                    <ul>
-                        <li class="active cursor-pointer">
-                            <a>Product</a>
-                        </li>
-                        <li class="inactive cursor-pointer">
-                            <a>Services</a>
-                        </li>
-                        <li class="inactive cursor-pointer">
-                            <a>Referral</a>
-                        </li>
-                    </ul>
-                </header>
-                <div class="current-balance">
-                    <div class="summary flex-row">
-                        <div class="col left">
-                            <p class="title">Current balance</p>
-                            <p class="amount">$ 8,690.00</p>
-                            <div class="flex-row">
-                                <p class="total">
-                                    Total summary in
-                                    <span class="period cursor-pointer">
-                      Month
-                    </span>
-                                </p>
-                                <i class="fa fa-chevron-down" style="font-size: 11px; margin-top: 2px;"></i>
-                            </div>
-                        </div>
-                        <div class="col right">
-                            <div class="export flex-row">
-                                <p class="download">
-                                    Export report
-                                    <figure class="cursor-pointer">
-                                        <img src="./assets/images/download.svg" alt="download" />
-                                    </figure>
-                                </p>
-                            </div>
-                            <ul class="flex-row">
-                                <li class="item sales">
-                                    <span class="text">Sales</span>
-                                </li>
-                                <li class="item orders">
-                                    <span class="text">Orders</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="graph">
-                        <figure class="">
-                            <img src="./assets/images/graph.png" alt="graph" />
+                    <div class="right flex-row">
+                        <figure class="notification">
+                            <img src="./assets/images/notification.svg" alt="notification" />
+                        </figure>
+                        <figure class="avi">
+                            <img src="./assets/images/avi.jpg" alt="avi" />
                         </figure>
                     </div>
-                </div>
-                <div class="recent-orders">
-                    <h2>Recent Orders</h2>
-                    <ul class="responsive-table">
-                        <li class="table-header">
-                            <div class="col col-1">ID</div>
-                            <div class="col col-2">Name</div>
-                            <div class="col col-3">Date</div>
-                            <div class="col col-4">Amount</div>
-                            <div class="col col-5"></div>
-                        </li>
-                        <li class="table-row cursor-pointer">
-                            <div class="col col-1" data-label="ID">3290</div>
-                            <div class="col col-2" data-label="Name">
-                                Sharon Bowers
-                            </div>
-                            <div class="col col-3" data-label="Date">May 23, 2020</div>
-                            <div class="col col-4" data-label="Amount">
-                                $89
-                            </div>
-                            <div class="col col-5" data-label="Actions">
-                                <figure>
-                                    <img src="./assets/images/more.svg" alt="more" />
-                                </figure>
-                            </div>
-                        </li>
-                        <li class="table-row cursor-pointer">
-                            <div class="col col-1" data-label="ID">3289</div>
-                            <div class="col col-2" data-label="Name">
-                                Constance Willis
-                            </div>
-                            <div class="col col-3" data-label="Date">May 22, 2020</div>
-                            <div class="col col-4" data-label="Amount">
-                                $74
-                            </div>
-                            <div class="col col-5" data-label="Actions">
-                                <figure>
-                                    <img src="./assets/images/more.svg" alt="more" />
-                                </figure>
-                            </div>
-                        </li>
-                        <li class="table-row cursor-pointer">
-                            <div class="col col-1" data-label="ID">3288</div>
-                            <div class="col col-2" data-label="Name">
-                                Josephine Ellis
-                            </div>
-                            <div class="col col-3" data-label="Date">May 20, 2020</div>
-                            <div class="col col-4" data-label="Amount">
-                                $79
-                            </div>
-                            <div class="col col-5" data-label="Actions">
-                                <figure>
-                                    <img src="./assets/images/more.svg" alt="more" />
-                                </figure>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section class="statistics">
-                <header class="flex-row">
-                    <figure class="notification">
-                        <img src="./assets/images/notification.svg" alt="notification" />
-                    </figure>
-                    <figure class="avi">
-                        <img src="./assets/images/avi.jpg" alt="avi" />
-                    </figure>
                 </header>
-                <div class="statistics">
-                    <h2 class="stat">Statistics</h2>
-                    <div class="items flex-row container">
-                        <div class="item flex-col">
-                            <figure class="cursor-pointer">
-                                <img src="./assets/images/graph-blue.PNG" alt="graph-blue" />
-                            </figure>
-                            <p class="text">15.980</p>
-                            <p class="name">Orders</p>
-                        </div>
-                        <div class="item flex-col right">
-                            <figure class="cursor-pointer">
-                                <img src="./assets/images/graph-amber.PNG" alt="graph-amber" />
-                            </figure>
-                            <p class="text">15.980</p>
-                            <p class="name">Returns</p>
-                        </div>
-                    </div>
-                    <div class="payment-history">
-                        <h2 class="flex-row">
-                            Payment History
-                            <figure>
-                                <img src="./assets/images/history.PNG" alt="history" />
-                            </figure>
-                        </h2>
-                        <div class="summary">
-                            <div class="card income flex-row">
-                                <figure class="">
-                                    <img src="./assets/images/75.PNG" alt="75" />
-                                </figure>
-                                <div class="description">
-                                    <p class="history-title">Average income</p>
-                                    <p class="history-amount">$12,380.00</p>
+            </nav>
+            <main>
+                <section class="sales">
+                    <header>
+                        <h1>Sales Summary</h1>
+                        <ul>
+                            <li class="active cursor-pointer">
+                                <a>Product</a>
+                            </li>
+                            <li class="inactive cursor-pointer">
+                                <a>Services</a>
+                            </li>
+                            <li class="inactive cursor-pointer">
+                                <a>Referral</a>
+                            </li>
+                        </ul>
+                    </header>
+                    <div class="current-balance">
+                        <div class="summary flex-row">
+                            <div class="col left">
+                                <p class="title">Current balance</p>
+                                <p class="amount">$ 8,690.00</p>
+                                <div class="flex-row">
+                                    <p class="total">
+                                        Total summary in
+                                        <span class="period cursor-pointer">
+                      Month
+                    </span>
+                                    </p>
+                                    <i class="fa fa-chevron-down" style="font-size: 11px; margin-top: 2px;"></i>
                                 </div>
                             </div>
-                            <div class="card speed flex-row">
-                                <figure ">
+                            <div class="col right">
+                                <div class="export flex-row">
+                                    <p class="download">
+                                        Export report
+                                        <figure class="cursor-pointer">
+                                            <img src="./assets/images/download.svg" alt="download" />
+                                        </figure>
+                                    </p>
+                                </div>
+                                <ul class="flex-row">
+                                    <li class="item sales">
+                                        <span class="text">Sales</span>
+                                    </li>
+                                    <li class="item orders">
+                                        <span class="text">Orders</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="graph">
+                            <figure class="">
+                                <img src="./assets/images/graph.png" alt="graph" />
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="recent-orders">
+                        <h2>Recent Orders</h2>
+                        <ul class="responsive-table">
+                            <li class="table-header">
+                                <div class="col col-1">ID</div>
+                                <div class="col col-2">Name</div>
+                                <div class="col col-3">Date</div>
+                                <div class="col col-4">Amount</div>
+                                <div class="col col-5"></div>
+                            </li>
+                            <li class="table-row cursor-pointer">
+                                <div class="col col-1" data-label="ID">3290</div>
+                                <div class="col col-2" data-label="Name">
+                                    Sharon Bowers
+                                </div>
+                                <div class="col col-3" data-label="Date">May 23, 2020</div>
+                                <div class="col col-4" data-label="Amount">
+                                    $89
+                                </div>
+                                <div class="col col-5" data-label="Actions">
+                                    <figure>
+                                        <img src="./assets/images/more.svg" alt="more" />
+                                    </figure>
+                                </div>
+                            </li>
+                            <li class="table-row cursor-pointer">
+                                <div class="col col-1" data-label="ID">3289</div>
+                                <div class="col col-2" data-label="Name">
+                                    Constance Willis
+                                </div>
+                                <div class="col col-3" data-label="Date">May 22, 2020</div>
+                                <div class="col col-4" data-label="Amount">
+                                    $74
+                                </div>
+                                <div class="col col-5" data-label="Actions">
+                                    <figure>
+                                        <img src="./assets/images/more.svg" alt="more" />
+                                    </figure>
+                                </div>
+                            </li>
+                            <li class="table-row cursor-pointer">
+                                <div class="col col-1" data-label="ID">3288</div>
+                                <div class="col col-2" data-label="Name">
+                                    Josephine Ellis
+                                </div>
+                                <div class="col col-3" data-label="Date">May 20, 2020</div>
+                                <div class="col col-4" data-label="Amount">
+                                    $79
+                                </div>
+                                <div class="col col-5" data-label="Actions">
+                                    <figure>
+                                        <img src="./assets/images/more.svg" alt="more" />
+                                    </figure>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="statistics">
+                    <div class="statistics">
+                        <h2 class="stat">Statistics</h2>
+                        <div class="items flex-row container">
+                            <div class="item flex-col">
+                                <figure class="cursor-pointer">
+                                    <img src="./assets/images/graph-blue.PNG" alt="graph-blue" />
+                                </figure>
+                                <p class="text">15.980</p>
+                                <p class="name">Orders</p>
+                            </div>
+                            <div class="item flex-col right">
+                                <figure class="cursor-pointer">
+                                    <img src="./assets/images/graph-amber.PNG" alt="graph-amber" />
+                                </figure>
+                                <p class="text">15.980</p>
+                                <p class="name">Returns</p>
+                            </div>
+                        </div>
+                        <div class="payment-history">
+                            <h2 class="flex-row">
+                                Payment History
+                                <figure>
+                                    <img src="./assets/images/history.PNG" alt="history" />
+                                </figure>
+                            </h2>
+                            <div class="summary">
+                                <div class="card income flex-row">
+                                    <figure class="">
+                                        <img src="./assets/images/75.PNG" alt="75" />
+                                    </figure>
+                                    <div class="description">
+                                        <p class="history-title">Average income</p>
+                                        <p class="history-amount">$12,380.00</p>
+                                    </div>
+                                </div>
+                                <div class="card speed flex-row">
+                                    <figure ">
                                     <img src="./assets/images/25.PNG " alt="25 " />
                                 </figure>
                                 <div class="description ">
@@ -270,6 +275,7 @@
                 </div>
             </section>
         </main>
+        </div>
     </div>
 </body>
 

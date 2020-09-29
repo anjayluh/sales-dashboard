@@ -40,20 +40,24 @@ body {
     margin: 0px;
 }
 
+.wrapper>.container {
+    width: 100%;
+}
+
 .wrapper,
 main {
     display: flex;
     flex-direction: row;
 }
 
-nav,
+nav.main-nav,
 main section {
     display: flex;
     flex-direction: column;
 }
 
-nav {
-    padding-top: 18px;
+nav.main-nav {
+    padding-top: 19px;
     max-width: 7%;
 }
 
@@ -81,15 +85,27 @@ main {
 }
 
 main section {
-    padding: 40px 90px;
+    padding: 0px 90px;
 }
 
 section.sales {
+    padding-top: 3px;
     background-color: #fbfbfb;
     width: 80%;
 }
 
-section.sales input {
+div.search {
+    background-color: #fbfbfb;
+    width: 80%;
+    padding: 40px 90px;
+}
+
+.top-nav .right {
+    width: 20%;
+    padding: 40px 90px;
+}
+
+.top-nav input {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
     border: medium none;
     font-size: 14px;
@@ -118,17 +134,19 @@ section.sales input {
     color: #000000;
 }
 
-section.sales input:focus {
+.top-nav input:focus {
     color: #495057;
     outline: 0;
     box-shadow: none;
+    border: medium none;
 }
 
-section.sales input::placeholder {
+top-nav input::placeholder {
     color: #c7ccd1;
 }
 
 section.statistics {
+    padding-top: 3px;
     width: 20%;
 }
 
@@ -136,7 +154,7 @@ section.statistics {
     font-size: 22px;
     font-weight: 600;
     color: #0f0f0f;
-    margin-top: 64px;
+    margin-top: -2px;
     margin-bottom: 10px;
 }
 
@@ -149,7 +167,7 @@ section.statistics {
     padding: 0;
     justify-content: left;
     height: 40px;
-    margin: 0px auto 25px auto;
+    margin: 0px auto 23px auto;
     border-bottom: 1px solid #dbe1e7;
 }
 
@@ -197,7 +215,7 @@ li.active a {
 }
 
 .current-balance {
-    margin-bottom: 39px;
+    margin-bottom: 40px;
 }
 
 .summary .left figure {
@@ -218,10 +236,6 @@ li.active a {
 
 .summary p {
     margin: 2px 0px 6px 0px;
-}
-
-.summary {
-    margin-bottom: 47px;
 }
 
 p.title {
@@ -333,6 +347,10 @@ h2 {
     margin: 0px;
 }
 
+h2.recent-orders {
+    margin-bottom: -8px;
+}
+
 h2.stat {
     margin-bottom: 18px;
 }
@@ -420,16 +438,17 @@ h2.stat {
     margin-bottom: 51px;
 }
 
-.statistics header {
+.top-nav {
+    width: 100%;
+}
+
+.top-nav figure.notification {
+    margin-top: 4px;
+    margin-right: 25px;
     margin-left: auto;
 }
 
-.statistics figure.notification {
-    margin-top: 4px;
-    margin-right: 25px;
-}
-
-.statistics .right figure {
+.top-nav .right figure {
     margin-top: 6px;
 }
 
@@ -443,22 +462,23 @@ h2.stat {
     margin-left: 12px;
 }
 
-.statistics figure.notification img {
+.top-nav figure.notification img {
     width: 23px;
 }
 
-.statistics figure {
+.statistics figure,
+.top-nav figure {
     margin: 0px;
 }
 
-.statistics figure.avi img {
+.top-nav figure.avi img {
     width: 30px;
     height: 30px;
     border-radius: 50%;
 }
 
 .statistics .items {
-    height: 83px;
+    height: 78px;
     border: 1px solid #dbe1e8;
     border-radius: 10px;
     padding: 20px 30px;
@@ -490,7 +510,8 @@ h2.stat {
 }
 
 .payment-history .summary {
-    margin-top: 24px;
+    margin-top: 16px;
+    margin-bottom: 48px;
 }
 
 .card {
@@ -607,14 +628,11 @@ button.view span {
 
 /* Responsiveness */
 
-@media screen and (max-width: 1449px) {
-    .wrapper,
-    main {
-        display: flex;
-        flex-direction: row;
+@media screen and (max-width: 1306px) {
+    .top-nav .right {
+        background-color: #fbfbfb;
     }
     .wrapper main {
-        width: 89%;
         flex-direction: column;
     }
     main section.sales,
@@ -631,11 +649,8 @@ button.view span {
     figure.status img {
         margin-left: 0px;
     }
-}
-
-@media screen and (max-width: 830px) {
     .wrapper main {
-        width: 82%;
+        width: 93%;
         flex-direction: column;
     }
 }
